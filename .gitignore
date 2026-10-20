@@ -19,5 +19,9 @@ web-app/.env*.local
 .DS_Store
 Thumbs.db
 *.log
-.vscode/
 .idea/
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+config.bat
+node_modules
