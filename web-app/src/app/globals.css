@@ -27,6 +27,25 @@
   background: #0d9488;
 }
 
+/* Safe area for mobile devices */
+.safe-area-bottom {
+  padding-bottom: max(env(safe-area-inset-bottom, 0px), 8px);
+}
+
+/* Hide scrollbar for clean horizontal scrolls on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth tap and touch behavior */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* Print Styles for Clinic Prescription & Reports */
 @media print {
   @page {
