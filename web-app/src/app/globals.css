@@ -7,7 +7,7 @@
 
 .font-urdu {
   font-family: var(--font-urdu), 'Jameel Noori Nastaleeq', 'Urdu Typesetting', serif;
-  line-height: 2;
+  line-height: 1.4;
   direction: rtl;
 }
 

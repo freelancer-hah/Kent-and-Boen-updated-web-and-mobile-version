@@ -488,122 +488,122 @@ export default function Home() {
       {/* ========================================================================= */}
       {/* 1. COMPACT TOP DESKTOP HEADER */}
       {/* ========================================================================= */}
-      <header className="no-print bg-white border-b border-slate-300 sticky top-0 z-40">
+      <header className="no-print bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs">
         <div className="max-w-[1440px] mx-auto px-4">
-          <div className="flex items-center justify-between h-13">
+          <div className="flex items-center justify-between h-14 gap-3">
             {/* Left: Brand Identity */}
-            <div className="flex items-center space-x-2 shrink-0">
-              <div className="w-7 h-7 rounded-md bg-teal-700 flex items-center justify-center text-white shadow-xs">
-                <Stethoscope className="w-4 h-4" />
+            <div className="flex items-center gap-2.5 shrink-0">
+              <div className="w-8 h-8 rounded-lg bg-teal-700 flex items-center justify-center text-white shadow-xs">
+                <Stethoscope className="w-4.5 h-4.5" />
               </div>
-              <span className="font-bold text-sm text-slate-900 tracking-tight">
+              <span className="font-extrabold text-sm text-slate-900 tracking-tight whitespace-nowrap">
                 Kent & Boenninghausen
-              </span>
-              <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-300">
-                Clinic 2026
               </span>
             </div>
 
             {/* Center: Tabs */}
-            <nav className="flex items-center space-x-0.5">
+            <nav className="flex items-center gap-1">
               <button
                 onClick={() => setActiveTab('repertorize')}
-                className={`flex items-center space-x-1.5 px-3 py-1.5 text-xs font-semibold rounded-md transition ${
+                className={`h-9 px-3 rounded-lg text-xs font-semibold whitespace-nowrap inline-flex items-center gap-1.5 transition ${
                   activeTab === 'repertorize'
-                    ? 'bg-teal-700 text-white shadow-xs'
-                    : 'text-slate-700 hover:bg-slate-100'
+                    ? 'bg-teal-700 text-white shadow-xs font-bold'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                 }`}
               >
-                <Activity className="w-3.5 h-3.5" />
-                <span>Repertory Grid</span>
+                <Activity className="w-3.5 h-3.5 shrink-0" />
+                <span>Repertory</span>
                 {basket.length > 0 && (
-                  <span className={`w-4 h-4 rounded-full text-[10px] font-bold flex items-center justify-center ${activeTab === 'repertorize' ? 'bg-white text-teal-800' : 'bg-teal-700 text-white'}`}>
+                  <span className={`px-1.5 py-0.2 rounded-full text-[10px] font-bold ${activeTab === 'repertorize' ? 'bg-white text-teal-800' : 'bg-teal-700 text-white'}`}>
                     {basket.length}
                   </span>
                 )}
               </button>
               <button
                 onClick={() => setActiveTab('patients')}
-                className={`flex items-center space-x-1.5 px-3 py-1.5 text-xs font-semibold rounded-md transition ${
+                className={`h-9 px-3 rounded-lg text-xs font-semibold whitespace-nowrap inline-flex items-center gap-1.5 transition ${
                   activeTab === 'patients'
-                    ? 'bg-teal-700 text-white shadow-xs'
-                    : 'text-slate-700 hover:bg-slate-100'
+                    ? 'bg-teal-700 text-white shadow-xs font-bold'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                 }`}
               >
-                <Users className="w-3.5 h-3.5" />
-                <span>Patients (EHR)</span>
+                <Users className="w-3.5 h-3.5 shrink-0" />
+                <span>Patients</span>
               </button>
               <button
                 onClick={() => setActiveTab('browser')}
-                className={`flex items-center space-x-1.5 px-3 py-1.5 text-xs font-semibold rounded-md transition ${
+                className={`h-9 px-3 rounded-lg text-xs font-semibold whitespace-nowrap inline-flex items-center gap-1.5 transition ${
                   activeTab === 'browser'
-                    ? 'bg-teal-700 text-white shadow-xs'
-                    : 'text-slate-700 hover:bg-slate-100'
+                    ? 'bg-teal-700 text-white shadow-xs font-bold'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                 }`}
               >
-                <BookOpen className="w-3.5 h-3.5" />
+                <BookOpen className="w-3.5 h-3.5 shrink-0" />
                 <span>Chapters</span>
               </button>
               <button
                 onClick={() => setActiveTab('materia')}
-                className={`flex items-center space-x-1.5 px-3 py-1.5 text-xs font-semibold rounded-md transition ${
+                className={`h-9 px-3 rounded-lg text-xs font-semibold whitespace-nowrap inline-flex items-center gap-1.5 transition ${
                   activeTab === 'materia'
-                    ? 'bg-teal-700 text-white shadow-xs'
-                    : 'text-slate-700 hover:bg-slate-100'
+                    ? 'bg-teal-700 text-white shadow-xs font-bold'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                 }`}
               >
-                <Pill className="w-3.5 h-3.5" />
+                <Pill className="w-3.5 h-3.5 shrink-0" />
                 <span>Materia Medica</span>
               </button>
               <button
                 onClick={() => setActiveTab('prescription')}
-                className={`flex items-center space-x-1.5 px-3 py-1.5 text-xs font-semibold rounded-md transition ${
+                className={`h-9 px-3 rounded-lg text-xs font-semibold whitespace-nowrap inline-flex items-center gap-1.5 transition ${
                   activeTab === 'prescription'
-                    ? 'bg-teal-700 text-white shadow-xs'
-                    : 'text-slate-700 hover:bg-slate-100'
+                    ? 'bg-teal-700 text-white shadow-xs font-bold'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                 }`}
               >
-                <Printer className="w-3.5 h-3.5" />
-                <span>Prescription (Rx)</span>
+                <Printer className="w-3.5 h-3.5 shrink-0" />
+                <span>Prescription</span>
               </button>
             </nav>
 
             {/* Right: Mode & Doctor Auth */}
-            <div className="flex items-center space-x-2 shrink-0">
+            <div className="flex items-center gap-2 shrink-0">
               {/* Repertory Select */}
-              <div className="flex items-center bg-slate-100 p-0.5 rounded border border-slate-300 text-xs">
+              <div className="inline-flex items-center p-0.5 bg-slate-100 rounded-lg border border-slate-200 h-9">
                 <button
                   onClick={() => setRepertoryId(1)}
-                  className={`px-2 py-0.5 rounded font-semibold transition ${
+                  className={`h-7 px-2.5 rounded-md text-xs font-semibold transition whitespace-nowrap ${
                     repertoryId === 1
                       ? 'bg-white text-teal-800 shadow-xs font-bold'
-                      : 'text-slate-600 hover:text-slate-900'
+                      : 'text-slate-500 hover:text-slate-900'
                   }`}
+                  title="Kent Repertory (64,000+ rubrics)"
                 >
-                  Kent (64k)
+                  Kent
                 </button>
                 <button
                   onClick={() => setRepertoryId(2)}
-                  className={`px-2 py-0.5 rounded font-semibold transition ${
+                  className={`h-7 px-2.5 rounded-md text-xs font-semibold transition whitespace-nowrap ${
                     repertoryId === 2
                       ? 'bg-white text-teal-800 shadow-xs font-bold'
-                      : 'text-slate-600 hover:text-slate-900'
+                      : 'text-slate-500 hover:text-slate-900'
                   }`}
+                  title="Boenninghausen Repertory (2,500+ rubrics)"
                 >
-                  Boenninghausen (2.5k)
+                  Boenninghausen
                 </button>
               </div>
 
-              {/* Doctor Sign In Button */}
+              {/* Doctor Sign In / Account Icon Button */}
               {currentDoctor ? (
                 <button
                   onClick={() => setShowAuthModal(true)}
-                  className="flex items-center space-x-1.5 px-2.5 py-1 rounded bg-teal-50 border border-teal-200 text-teal-900 hover:bg-teal-100 transition text-xs font-semibold"
+                  className="h-9 px-2.5 inline-flex items-center gap-1.5 rounded-lg bg-teal-50 border border-teal-200 text-teal-900 hover:bg-teal-100 transition text-xs font-semibold whitespace-nowrap shadow-xs"
+                  title={`Signed in as ${currentDoctor.doctor_name} (Click to manage)`}
                 >
-                  <div className="w-4 h-4 rounded-full bg-teal-700 text-white font-bold flex items-center justify-center text-[9px]">
+                  <div className="w-5 h-5 rounded-full bg-teal-700 text-white font-bold flex items-center justify-center text-[10px]">
                     DR
                   </div>
-                  <span className="truncate max-w-[120px]">{currentDoctor.doctor_name}</span>
+                  <LogOut className="w-3.5 h-3.5 text-slate-500 hover:text-rose-600 ml-0.5" />
                 </button>
               ) : (
                 <button
@@ -611,10 +611,10 @@ export default function Home() {
                     setAuthMode('login');
                     setShowAuthModal(true);
                   }}
-                  className="flex items-center space-x-1 px-2.5 py-1 rounded bg-teal-700 hover:bg-teal-800 text-white text-xs font-bold transition shadow-xs"
+                  className="h-9 w-9 inline-flex items-center justify-center rounded-lg bg-teal-700 hover:bg-teal-800 text-white transition shadow-xs"
+                  title="Doctor Sign In"
                 >
-                  <LogIn className="w-3.5 h-3.5" />
-                  <span>Doctor Sign In</span>
+                  <LogIn className="w-4 h-4" />
                 </button>
               )}
             </div>
@@ -632,22 +632,22 @@ export default function Home() {
         {activeTab === 'repertorize' && (
           <div className="space-y-3">
             {/* Top Command Bar: Search + Chapter Filter + Quick Test Cases */}
-            <div className="bg-white border border-slate-300 p-2.5 rounded-lg shadow-xs flex flex-wrap items-center justify-between gap-2.5">
+            <div className="bg-white border border-slate-200 p-2.5 rounded-xl shadow-xs flex flex-wrap items-center justify-between gap-2.5">
               {/* Search & Chapter inputs */}
-              <div className="flex items-center space-x-2 flex-1 min-w-[320px]">
+              <div className="flex items-center gap-2 flex-1 min-w-[320px]">
                 <div className="relative flex-1">
-                  <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2 pointer-events-none" />
+                  <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5 pointer-events-none" />
                   <input
                     type="text"
                     placeholder="Search rubric in English or Urdu (e.g. headache, سر درد, restlessness, کھانسی)..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full bg-slate-50 border border-slate-300 rounded pl-8 pr-7 py-1 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-teal-700 transition"
+                    className="h-9 w-full bg-slate-50 border border-slate-200 rounded-lg pl-9 pr-8 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-teal-700 focus:ring-1 focus:ring-teal-700 transition"
                   />
                   {searchQuery && (
                     <button
                       onClick={() => setSearchQuery('')}
-                      className="absolute right-2 top-1.5 text-slate-400 hover:text-slate-600 text-xs"
+                      className="absolute right-2.5 top-2 text-slate-400 hover:text-slate-600 text-xs w-5 h-5 flex items-center justify-center rounded-full hover:bg-slate-200"
                     >
                       ✕
                     </button>
@@ -657,7 +657,7 @@ export default function Home() {
                 <select
                   value={selectedCatId}
                   onChange={(e) => setSelectedCatId(Number(e.target.value))}
-                  className="bg-slate-50 border border-slate-300 rounded px-2 py-1 text-xs text-slate-800 focus:outline-none focus:bg-white focus:border-teal-700 w-44"
+                  className="h-9 bg-slate-50 border border-slate-200 rounded-lg px-3 text-xs text-slate-800 font-medium focus:outline-none focus:bg-white focus:border-teal-700 w-44 shrink-0 cursor-pointer"
                 >
                   <option value="0">All Chapters ({categories.length})</option>
                   {categories.map((c) => (
@@ -669,26 +669,26 @@ export default function Home() {
               </div>
 
               {/* Quick Benchmark Test Cases */}
-              <div className="flex items-center space-x-1.5 text-xs shrink-0">
-                <span className="font-bold text-slate-600 flex items-center space-x-1">
+              <div className="flex items-center gap-1.5 text-xs shrink-0 flex-wrap">
+                <span className="font-bold text-slate-600 flex items-center gap-1 text-xs mr-1">
                   <Sparkles className="w-3.5 h-3.5 text-amber-500" />
                   <span>Test Cases:</span>
                 </span>
                 <button
                   onClick={() => loadVerifiedTestCase(1)}
-                  className="px-2 py-0.5 rounded bg-slate-50 hover:bg-teal-50 text-teal-900 border border-slate-300 text-xs font-semibold"
+                  className="h-8 px-2.5 rounded-lg bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-900 border border-slate-200 text-xs font-semibold transition whitespace-nowrap"
                 >
                   1. Headache & Fever
                 </button>
                 <button
                   onClick={() => loadVerifiedTestCase(2)}
-                  className="px-2 py-0.5 rounded bg-slate-50 hover:bg-teal-50 text-teal-900 border border-slate-300 text-xs font-semibold"
+                  className="h-8 px-2.5 rounded-lg bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-900 border border-slate-200 text-xs font-semibold transition whitespace-nowrap"
                 >
                   2. Gastric Fullness
                 </button>
                 <button
                   onClick={() => loadVerifiedTestCase(3)}
-                  className="px-2 py-0.5 rounded bg-slate-50 hover:bg-teal-50 text-teal-900 border border-slate-300 text-xs font-semibold"
+                  className="h-8 px-2.5 rounded-lg bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-900 border border-slate-200 text-xs font-semibold transition whitespace-nowrap"
                 >
                   3. Chill & Anxiety
                 </button>
@@ -696,7 +696,7 @@ export default function Home() {
                 {basket.length > 0 && (
                   <button
                     onClick={() => setBasket([])}
-                    className="flex items-center space-x-1 px-2 py-0.5 rounded bg-rose-50 text-rose-700 border border-rose-200 text-xs font-semibold hover:bg-rose-100 ml-2"
+                    className="h-8 inline-flex items-center gap-1 px-2.5 rounded-lg bg-rose-50 text-rose-700 border border-rose-200 text-xs font-bold hover:bg-rose-100 transition whitespace-nowrap ml-1"
                   >
                     <Trash2 className="w-3 h-3" />
                     <span>Clear</span>
