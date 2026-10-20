@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Noto_Nastaliq_Urdu } from "next/font/google";
 import "./globals.css";
 
@@ -16,6 +16,13 @@ const nastaliq = Noto_Nastaliq_Urdu({
 export const metadata: Metadata = {
   title: "Kent & Boenninghausen Homeopathic Repertory & Clinic EHR",
   description: "Advanced Homeopathic Case Analysis, Bilingual Rubric Search, Patient EHR & Repertorization System",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#0f766e",
 };
 
 export default function RootLayout({

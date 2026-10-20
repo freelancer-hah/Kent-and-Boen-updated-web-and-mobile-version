@@ -15,7 +15,10 @@ export function getLocalDb(): DatabaseSync {
   if (localDb) return localDb;
 
   // Resolve DB path
-  const dbPath = path.resolve(process.cwd(), 'data', 'repertory.db');
+  let dbPath = path.resolve(process.cwd(), 'data', 'repertory.db');
+  if (!fs.existsSync(dbPath)) {
+    dbPath = path.resolve(process.cwd(), 'web-app', 'data', 'repertory.db');
+  }
   if (!fs.existsSync(dbPath)) {
     throw new Error(`Database file not found at ${dbPath}`);
   }
