@@ -1,0 +1,23 @@
+# Legacy Windows desktop folders and files
+Boen/
+Kent/
+BoenKentExeNew/
+KentBoenExe/
+kentboen_db (1)/
+*.zip
+KeyHere.txt
+.git_legacy_bitbucket/
+
+# Web App build & dependencies
+web-app/node_modules/
+web-app/.next/
+web-app/out/
+web-app/build/
+web-app/.env*.local
+
+# System & editor files
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
